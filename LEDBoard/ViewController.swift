@@ -35,9 +35,9 @@ class ViewController: UIViewController {
     //입력 후 엔터 & 보내기 버튼 누르면 레이블에 표시
     @IBAction func enterAndSendButtonTapped(_ sender: Any) {
         
-        //입력이 1글자보다 작고 nil이면 알림창 띄우고, 그게 아니면 라벨에 넣기
-        if let inputText = inputTextField.text, inputText.count <= 1 {
-            showAlert(title: "내용을 두 글자 이상 입력해 주세요!")
+        //입력이 1글자보다 작고 nil이면 알림창 띄우고, 그게 아니면 라벨에 넣기 + 20자 이하로 제한
+        if let inputText = inputTextField.text, inputText.count <= 1 || inputText.count >= 21 {
+            showAlert(title: "2 ~ 20자 이내로 입력해 주세요!")
         } else {
             resultLabel.text = inputTextField.text
         }
@@ -87,10 +87,12 @@ class ViewController: UIViewController {
     
     //텍스트 필드 디자인
     func designTextField() {
+        
         inputTextField.borderStyle = .none
-        inputTextField.placeholder = "두 글자 이상 입력해 주세요!"
+        inputTextField.placeholder = "2 ~ 20자 이내로 입력해 주세요!"
         inputTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0)) //왼쪽 여백
         inputTextField.leftViewMode = .always
+        
     }
     
     //알림창
