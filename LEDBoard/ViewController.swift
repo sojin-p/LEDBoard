@@ -12,15 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet var inputUIView: UIView!
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var inputTextField: UITextField!
+    @IBOutlet var sendButton: UIButton!
+    @IBOutlet var colorChangeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setDesign()
         
     }
     
     //컬러 버튼 누르면 버튼 타이틀과 레이블 컬러 변경
     @IBAction func randomColorChanged(_ sender: UIButton) {
-        
         let random = randomColor() //이걸 빼면 색깔이 서로 달라진다.
         
         sender.tintColor = random
@@ -47,6 +51,48 @@ class ViewController: UIViewController {
         
     }
     
+    //디자인
+    func setDesign() {
+        view.backgroundColor = .black
+        designTextField()
+        buttonDesign(button: sendButton, title: "보내기")
+        buttonDesign(button: colorChangeButton, title: "Aa")
+        designLabel()
+    }
+    
+    //레이블 디자인
+    func designLabel() {
+        resultLabel.text = ""
+        resultLabel.textColor = .white
+        resultLabel.textAlignment = .center
+        resultLabel.font = UIFont.systemFont(ofSize: 80)
+        resultLabel.numberOfLines = 0
+    }
+    
+    //버튼 디자인
+    func buttonDesign(button: UIButton, title: String) {
+        
+        button.setTitle(title, for: .normal)
+        button.tintColor = .black
+        button.backgroundColor = .white
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
+        button.layer.shadowOffset = CGSize(width: 1, height: 1)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 2
+        
+    }
+    
+    //텍스트 필드 디자인
+    func designTextField() {
+        inputTextField.borderStyle = .none
+        inputTextField.placeholder = "두 글자 이상 입력해 주세요!"
+        inputTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0)) //왼쪽 여백
+        inputTextField.leftViewMode = .always
+    }
+    
     //알림창
     func showAlert(title: String) {
         
@@ -60,7 +106,7 @@ class ViewController: UIViewController {
     //랜덤 컬러 생성
     func randomColor() -> UIColor? {
         
-        let colorList: [UIColor] = [.black, .blue, .brown, .red, .yellow, .green, .gray]
+        let colorList: [UIColor] = [.blue, .brown, .red, .yellow, .green, .gray, .lightGray, .cyan]
         
         return colorList.randomElement()
         

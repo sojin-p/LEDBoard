@@ -18,35 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT6-KR-SWZ">
-                                <rect key="frame" x="79" y="110" width="694" height="232"/>
+                                <rect key="frame" x="79" y="90" width="694" height="252"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pk1-1a-w7m">
-                                <rect key="frame" x="79" y="30" width="694" height="60"/>
+                                <rect key="frame" x="79" y="20" width="694" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kaF-go-Bzy">
-                                        <rect key="frame" x="10" y="10" width="674" height="40"/>
+                                        <rect key="frame" x="10" y="10" width="674" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-3y-Zyt">
-                                                <rect key="frame" x="0.0" y="0.0" width="508" height="40"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-3y-Zyt">
+                                                <rect key="frame" x="0.0" y="0.0" width="508" height="30"/>
+                                                <nil key="textColor"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="enterAndSendButtonTapped:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Ov4-bO-5d1"/>
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKz-Cu-EX0">
-                                                <rect key="frame" x="516" y="0.0" width="75" height="40"/>
+                                                <rect key="frame" x="516" y="0.0" width="75" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="enterAndSendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gwr-zh-htB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alb-Hp-FP6">
-                                                <rect key="frame" x="599" y="0.0" width="75" height="40"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alb-Hp-FP6">
+                                                <rect key="frame" x="599" y="0.0" width="75" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
@@ -58,7 +58,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="MSI-XT-N2k"/>
+                                    <constraint firstAttribute="height" constant="50" id="MSI-XT-N2k"/>
                                     <constraint firstItem="kaF-go-Bzy" firstAttribute="leading" secondItem="Pk1-1a-w7m" secondAttribute="leading" constant="10" id="QxM-Xv-Wip"/>
                                     <constraint firstAttribute="trailing" secondItem="kaF-go-Bzy" secondAttribute="trailing" constant="10" id="bgI-Zz-fLa"/>
                                     <constraint firstAttribute="bottom" secondItem="kaF-go-Bzy" secondAttribute="bottom" constant="10" id="kKU-bR-7pA"/>
@@ -72,7 +72,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pk1-1a-w7m" secondAttribute="trailing" constant="20" id="Lgb-B6-SN4"/>
                             <constraint firstItem="PT6-KR-SWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RzH-nC-dbw"/>
-                            <constraint firstItem="Pk1-1a-w7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="aBa-Q8-Dxh"/>
+                            <constraint firstItem="Pk1-1a-w7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aBa-Q8-Dxh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PT6-KR-SWZ" secondAttribute="bottom" constant="30" id="b11-YO-4C2"/>
                             <constraint firstItem="PT6-KR-SWZ" firstAttribute="top" secondItem="Pk1-1a-w7m" secondAttribute="bottom" constant="20" id="iB6-FF-T11"/>
                             <constraint firstItem="Pk1-1a-w7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kQC-5d-Lh1"/>
@@ -83,9 +83,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="colorChangeButton" destination="alb-Hp-FP6" id="FBU-ax-ZxA"/>
                         <outlet property="inputTextField" destination="Utr-3y-Zyt" id="bha-zN-hmW"/>
                         <outlet property="inputUIView" destination="Pk1-1a-w7m" id="xNV-92-r1Z"/>
                         <outlet property="resultLabel" destination="PT6-KR-SWZ" id="9gU-hp-XmU"/>
+                        <outlet property="sendButton" destination="qKz-Cu-EX0" id="Paw-Qg-4pR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
