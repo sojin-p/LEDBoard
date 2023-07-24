@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var inputUIView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+        
+        inputUIView.isHidden.toggle()
+        view.endEditing(true)
+        
+    }
+    
 }
 
