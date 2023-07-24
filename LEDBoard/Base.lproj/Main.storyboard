@@ -49,6 +49,9 @@
                                                 <rect key="frame" x="599" y="0.0" width="75" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="randomColorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="af7-HZ-CXa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

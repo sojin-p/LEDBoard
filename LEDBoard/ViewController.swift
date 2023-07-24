@@ -18,6 +18,16 @@ class ViewController: UIViewController {
         
     }
     
+    //컬러 버튼 누르면 버튼 타이틀과 레이블 컬러 변경
+    @IBAction func randomColorChanged(_ sender: UIButton) {
+        
+        let random = randomColor() //이걸 빼면 색깔이 서로 달라진다.
+        
+        sender.tintColor = random
+        resultLabel.textColor = random
+        
+    }
+    
     //입력 후 엔터 & 보내기 버튼 누르면 레이블에 표시
     @IBAction func enterAndSendButtonTapped(_ sender: Any) {
         
@@ -27,6 +37,13 @@ class ViewController: UIViewController {
         } else {
             resultLabel.text = inputTextField.text
         }
+        
+    }
+    
+    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+        
+        inputUIView.isHidden.toggle()
+        view.endEditing(true)
         
     }
     
@@ -40,10 +57,12 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+    //랜덤 컬러 생성
+    func randomColor() -> UIColor? {
         
-        inputUIView.isHidden.toggle()
-        view.endEditing(true)
+        let colorList: [UIColor] = [.black, .blue, .brown, .red, .yellow, .green, .gray]
+        
+        return colorList.randomElement()
         
     }
     
