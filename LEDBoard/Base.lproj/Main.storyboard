@@ -33,11 +33,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="508" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="enterAndSendButtonTapped:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Ov4-bO-5d1"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKz-Cu-EX0">
                                                 <rect key="frame" x="516" y="0.0" width="75" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="enterAndSendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gwr-zh-htB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alb-Hp-FP6">
                                                 <rect key="frame" x="599" y="0.0" width="75" height="40"/>
@@ -74,7 +80,9 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="inputTextField" destination="Utr-3y-Zyt" id="bha-zN-hmW"/>
                         <outlet property="inputUIView" destination="Pk1-1a-w7m" id="xNV-92-r1Z"/>
+                        <outlet property="resultLabel" destination="PT6-KR-SWZ" id="9gU-hp-XmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
